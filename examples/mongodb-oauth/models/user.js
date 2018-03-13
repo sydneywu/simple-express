@@ -1,4 +1,7 @@
-var mongoose = require('mongoose');
+'use strict';
+
+var mongoose = require('mongoose'),
+  Schema = mongoose.Schema;
 
 // create a schema
 var userSchema = new mongoose.Schema({
@@ -23,7 +26,5 @@ userSchema.pre('save', function(next){
 })
 
 var User = mongoose.model('User', userSchema);
-
-
 
 module.exports = User;
